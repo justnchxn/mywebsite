@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Justin — Portfolio</title>
+  <meta name="description" content="Portfolio of Justin — selected work, résumé, and contact." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600;700&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600;700&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <button class="iconbtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+      <h1 class="site-title">Justin Chan</h1>
+      <div style="width:32px"></div>
+    </div>
+  </header>
+
+  <!-- Right sidebar -->
+  <aside class="sidebar" id="sidebar" aria-label="Secondary">
+    <nav>
+      <a href="#about">ABOUT</a>
+      <a href="resume.pdf" target="_blank" rel="noopener">RESUME</a>
+      <a href="#work">WORK</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </aside>
+
+  <!-- Page -->
+  <main class="page">
+    <section id="about" class="about panel">
+      <p class="lede">
+        I’m a designer/developer focused on clean interfaces and thoughtful interaction.
+        Below are selected projects. Email me at <a href="mailto:you@example.com">you@example.com</a>.
+      </p>
+    </section>
+
+    <section id="work" class="grid">
+      <!-- Project card -->
+      <article class="card">
+        <a class="media" href="#" target="_blank" rel="noopener">
+          <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1400&auto=format&fit=crop" alt="Bicycle illustration" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>Illustrations</strong>
+          <p>I like to draw things I like. A Schwinn ride pictured above.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="media" href="#" target="_blank" rel="noopener">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop" alt="Mac displaying a website" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>IDEO Labs</strong>
+          <p>Front-end development for a custom WordPress theme.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="media" href="#" target="_blank" rel="noopener">
+          <img src="https://images.unsplash.com/photo-1529336953121-a0c0f19d45a6?q=80&w=1400&auto=format&fit=crop" alt="Abstract UI mock" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>Happen</strong>
+          <p>Senior capstone project: a tiny planning app for friends.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="media" href="#" target="_blank" rel="noopener">
+          <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1400&auto=format&fit=crop" alt="3D lines render" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>Playground</strong>
+          <p>Experiments in WebGL motion and micro-interactions.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="contact" class="panel contact">
+      <p>Open to freelance and full-time roles. <a href="mailto:you@example.com">you@example.com</a></p>
+    </section>
+  </main>
+
+  <!-- Mobile drawer -->
+  <div class="drawer" id="drawer" hidden>
+    <div class="drawer__panel">
+      <button class="iconbtn" id="closeDrawer" aria-label="Close menu">✕</button>
+      <nav class="drawer__nav">
+        <a href="#about">ABOUT</a>
+        <a href="resume.pdf" target="_blank" rel="noopener">RÉSUMÉ</a>
+        <a href="#work">WORK</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+    </div>
+  </div>
+
+  <script>
+    // simple drawer for small screens
+    const btn = document.getElementById('menuBtn');
+    const drawer = document.getElementById('drawer');
+    const closeBtn = document.getElementById('closeDrawer');
+
+    btn?.addEventListener('click', () => {
+      drawer.hidden = false;
+      btn.setAttribute('aria-expanded', 'true');
+    });
+    closeBtn?.addEventListener('click', () => {
+      drawer.hidden = true;
+      btn.setAttribute('aria-expanded', 'false');
+    });
+    drawer?.addEventListener('click', (e) => {
+      if (e.target === drawer) {
+        drawer.hidden = true;
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+</html>
