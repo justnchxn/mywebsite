@@ -15,7 +15,7 @@
   <!-- Top bar -->
   <header class="topbar">
     <div class="topbar__inner">
-      <button class="iconbtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+      <!-- <button class="iconbtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button> -->
       <h1 class="site-title">Justin Chan</h1>
       <div style="width:32px"></div>
     </div>
@@ -24,9 +24,9 @@
   <!-- Right sidebar -->
   <aside class="sidebar" id="sidebar" aria-label="Secondary">
     <nav>
-      <a href="#about">ABOUT</a>
+      <a href="#">ABOUT</a>
       <a href="resume.pdf" target="_blank" rel="noopener">RESUME</a>
-      <a href="#work">WORK</a>
+      <a href="#projects">PROJECTS</a>
       <a href="#contact">CONTACT</a>
     </nav>
   </aside>
@@ -35,56 +35,74 @@
   <main class="page">
     <section id="about" class="about panel">
       <p class="lede">
-        I’m a designer/developer focused on clean interfaces and thoughtful interaction.
-        Below are selected projects. Email me at <a href="mailto:you@example.com">you@example.com</a>.
+        Motivated Cyber Security Analyst with hands-on Python development experience and a strong interest in AI modeling.
+        Skilled in clean, efficient coding and applying machine learning techniques using libraries like TensorFlow and PyTorch.
+        Well versed in Cyber Security Principles and a strong foundation in network security and risk assessment. Experienced in
+        AI-driven and full-stack projects, with a focus on collaboration and continuous learning.
+
+        Below are selected projects.
       </p>
     </section>
 
-    <section id="work" class="grid">
+    <section id="projects" class="grid">
       <!-- Project card -->
       <article class="card">
-        <a class="media" href="#" target="_blank" rel="noopener">
-          <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1400&auto=format&fit=crop" alt="Bicycle illustration" loading="lazy">
+        <a class="media" href="adversarial_ai.html" target="_blank" rel="noopener">
+          <img src="images/adversarial_ai.png" alt="Bicycle illustration" loading="lazy">
         </a>
         <div class="caption">
-          <strong>Illustrations</strong>
-          <p>I like to draw things I like. A Schwinn ride pictured above.</p>
+          <strong>Adversarial AI Agent Trainer In Python</strong>
+          <p>Developed an environment using AI where agents learn to compete against
+          each other through reinforcement learning with a reward system to encourage strategic decision-making. Wrote a
+          research paper explaining the fundamentals of machine learning and reinforcement learning, with an in-depth analysis of
+          the advanced mathematics behind neural networks and reinforcement learning</p>
         </div>
       </article>
 
       <article class="card">
-        <a class="media" href="#" target="_blank" rel="noopener">
-          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop" alt="Mac displaying a website" loading="lazy">
+        <a class="media" href="encryption_tool.html" target="_blank" rel="noopener">
+          <img src="images/encryption_tool.png" alt="Mac displaying a website" loading="lazy">
         </a>
         <div class="caption">
-          <strong>IDEO Labs</strong>
-          <p>Front-end development for a custom WordPress theme.</p>
+          <strong>Traffic Detection in Wireshark</strong>
+          <p>Developed a program to encrypt and decrypt messages using AES and RSA encryption
+          algorithms. Implemented key generation, secure key storage, and message exchange protocols to simulate data
+          protection mechanisms. Used Cryptography libraries to handle encryption operations, key pairs, and digital signatures</p>
         </div>
       </article>
 
       <article class="card">
-        <a class="media" href="#" target="_blank" rel="noopener">
-          <img src="https://images.unsplash.com/photo-1529336953121-a0c0f19d45a6?q=80&w=1400&auto=format&fit=crop" alt="Abstract UI mock" loading="lazy">
+        <a class="media" href="wireshark.html" target="_blank" rel="noopener">
+          <img src="images/wireshark.png" alt="Abstract UI mock" loading="lazy">
         </a>
         <div class="caption">
-          <strong>Happen</strong>
-          <p>Senior capstone project: a tiny planning app for friends.</p>
+          <strong>Encryption Tool in Python</strong>
+          <p>Captured and analyzed live network traffic using Wireshark to identify security
+          vulnerabilities such as unencrypted credentials and suspicious IP activity. Detected anomalies including potential malware
+          communications and DNS tunneling patterns. Applied protocol filters and deep packet inspection to investigate traffic
+          behaviour and assess network risk.
+          </p>
         </div>
       </article>
 
       <article class="card">
-        <a class="media" href="#" target="_blank" rel="noopener">
-          <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1400&auto=format&fit=crop" alt="3D lines render" loading="lazy">
+        <a class="media" href="imagegen.html" target="_blank" rel="noopener">
+          <img src="images/imagegen.png" alt="3D lines render" loading="lazy">
         </a>
         <div class="caption">
-          <strong>Playground</strong>
-          <p>Experiments in WebGL motion and micro-interactions.</p>
+          <strong>AI Art Music Generator In Java</strong>
+          <p>AI Art Music Generator In Java - Designed and implemented a Java application that generates AI-created artwork 
+          based on user-input music preferences. Mapped music genres, sub-genres, and emotional tones to visual elements like
+          colour and style. Integrated algorithms that translate user inputs into aesthetic visual outputs.
+          Encryption Tool in Python - Developed a program to encrypt and decrypt messages using AES
+          </p>
         </div>
       </article>
     </section>
 
     <section id="contact" class="panel contact">
-      <p>Open to freelance and full-time roles. <a href="mailto:you@example.com">you@example.com</a></p>
+      <p>Feel free to contact me at <a href="mailto:justnchxn@gmail.com">justnchxn@gmail.com</a></p>
+      <p>Or connect with me on <a href="https://www.linkedin.com/in/justnchxn" target="_blank" rel="noopener">linkedin.com/in/justnchxn</a></p>
     </section>
   </main>
 
@@ -95,7 +113,7 @@
       <nav class="drawer__nav">
         <a href="#about">ABOUT</a>
         <a href="resume.pdf" target="_blank" rel="noopener">RÉSUMÉ</a>
-        <a href="#work">WORK</a>
+        <a href="#projects">WORK</a>
         <a href="#contact">CONTACT</a>
       </nav>
     </div>
