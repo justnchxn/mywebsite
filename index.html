@@ -12,133 +12,266 @@
 </head>
 <body>
 
-  <!-- Top bar -->
-  <header class="topbar">
-    <div class="topbar__inner">
-      <!-- <button class="iconbtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button> -->
-      <h1 class="site-title">Justin Chan</h1>
-      <div style="width:32px"></div>
+  <!-- Top nav -->
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">Justin<span class="dot">.</span></div>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#top">About</a>
+        <a href="#projects">Projects</a>
+        <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Right sidebar -->
-  <aside class="sidebar" id="sidebar" aria-label="Secondary">
-    <nav>
-      <a href="#">ABOUT</a>
-      <a href="resume.pdf" target="_blank" rel="noopener">RESUME</a>
-      <a href="#projects">PROJECTS</a>
-      <a href="#contact">CONTACT</a>
-    </nav>
-  </aside>
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Hello,</p>
+        <h1>I am <span class="accent">Justin</span>,<br>Software Dev & <br>Cyber Security</h1>
+        <p class="sub">I build secure, performant, and human-friendly software.</p>
+        <a class="btn-ghost" href="#contact">Let’s get in touch</a>
+      </div>
 
-  <!-- Page -->
-  <main class="page">
-    <section id="about" class="about panel">
-      <p class="lede">
-        Motivated Cyber Security Analyst with hands-on Python development experience and a strong interest in AI modeling.
-        Skilled in clean, efficient coding and applying machine learning techniques using libraries like TensorFlow and PyTorch.
-        Well versed in Cyber Security Principles and a strong foundation in network security and risk assessment. Experienced in
-        AI-driven and full-stack projects, with a focus on collaboration and continuous learning.
+      <!-- Graphic/Image -->
+      <div class="hero-splash" aria-hidden="true">
+        <!-- <img src="" alt="Cyber security and AI illustration"> -->
+      </div>
+    </div>
+  </section>
 
-        Below are selected projects.
-      </p>
-    </section>
+  <section id="about" class="about panel container">
+    <p id="aboutText"></p>
+  </section>
 
-    <section id="projects" class="grid">
-      <!-- Project card -->
-      <article class="card">
-        <a class="media" href="adversarial_ai.html" target="_blank" rel="noopener">
-          <img src="images/adversarial_ai.png" alt="Bicycle illustration" loading="lazy">
-        </a>
-        <div class="caption">
-          <strong>Adversarial AI Agent Trainer In Python</strong>
-          <p>Developed an environment using AI where agents learn to compete against
-          each other through reinforcement learning with a reward system to encourage strategic decision-making. Wrote a
-          research paper explaining the fundamentals of machine learning and reinforcement learning, with an in-depth analysis of
-          the advanced mathematics behind neural networks and reinforcement learning</p>
+
+
+  <!-- Skills -->
+  <section class="skills container">
+    <h2><span class="accent">Skills</span> and tools</h2>
+    <ul class="tag-cloud">
+      <li>Python</li><li>TensorFlow</li><li>PyTorch</li><li>Reinforcement Learning</li>
+      <li>AES/RSA</li><li>Wireshark</li><li>Linux</li><li>Docker</li><li>Git</li>
+      <li>Java</li><li>JavaScript</li><li>Next.js</li><li>SQL</li><li>Photoshop</li><li>Video Editing</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="grid container">
+    <!-- Project card -->
+    <article class="card">
+      <a class="media" href="javascript:void(0)" 
+         onclick="openProject(
+           'Adversarial AI Agent Trainer In Python',
+           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+           'videos/snakeai.mp4',
+           '',
+           'https://github.com/justnchxn/snakegameupdated'
+         )">
+        <img src="images/snakegame.png" alt="Adversarial AI project" loading="lazy">
+      </a>
+      <div class="caption">
+        <strong>Adversarial AI Agent Trainer In Python</strong>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="media" href="javascript:void(0)" 
+         onclick="openProject(
+           'DDos Map',
+           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+           'videos/ddosmap.mp4',
+           'https://ddos-map.vercel.app/',
+           'https://github.com/justnchxn/DDOS-Map'
+         )">
+        <img src="images/ddosmap.png" alt="Encryption tool project" loading="lazy">
+      </a>
+      <div class="caption">
+        <strong>DDOS Map</strong>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="media" href="javascript:void(0)" 
+         onclick="openProject(
+           'AI Art Music Generator',
+           'Java application that generates AI-created artwork based on user-input music preferences. Maps music genres and tones to visual elements.',
+           'videos/musictoart.mp4',
+           'https://musictoart.onrender.com',
+           'https://github.com/justnchxn/musictoart'
+         )">
+        <img src="images/musictoart.png" alt="AI art generator project" loading="lazy">
+      </a>
+      <div class="caption">
+        <strong>AI Art Music Generator</strong>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="media" href="javascript:void(0)" 
+         onclick="openProject(
+           'Encryption Tool in Python',
+           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+           'videos/cipher.mp4',
+           '',
+           'https://github.com/justnchxn/Cipher-App'
+         )">
+        <img src="images/cipher.png" alt="Wireshark analysis project" loading="lazy">
+      </a>
+      <div class="caption">
+        <strong>Encryption Tool in Python</strong>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="media" href="javascript:void(0)" 
+         onclick="openProject(
+           'Groceries App',
+           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+           'videos/shoppingapp.mp4',
+           '',
+           'https://github.com/justnchxn/RecipesApp'
+         )">
+        <img src="images/shoppingapp.png" alt="Wireshark analysis project" loading="lazy">
+      </a>
+      <div class="caption">
+        <strong>Shopping App</strong>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="media" href="javascript:void(0)" 
+         onclick="openProject(
+           'Sudoku Solver',
+           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+           'videos/sudokusolver.mp4',
+           '',
+           'https://github.com/justnchxn/Sudoku-Solver'
+         )">
+        <img src="images/sudokuapp.png" alt="Wireshark analysis project" loading="lazy">
+      </a>
+      <div class="caption">
+        <strong>Sudoku Solver</strong>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </article>
+
+  </section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="panel contact container">
+    <p>Feel free to contact me at <a href="mailto:justnchxn@gmail.com">justnchxn@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/justnchxn" target="_blank" rel="noopener">linkedin.com/in/justnchxn</a></p>
+  </section>
+
+  <!-- Project Modal -->
+  <div id="projectModal" class="modal" hidden>
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <div class="modal-grid">
+        <div class="video-wrapper">
+          <video id="modalVideo" controls>
+            <source src="" type="video/mp4">
+          </video>
         </div>
-      </article>
-
-      <article class="card">
-        <a class="media" href="encryption_tool.html" target="_blank" rel="noopener">
-          <img src="images/encryption_tool.png" alt="Mac displaying a website" loading="lazy">
-        </a>
-        <div class="caption">
-          <strong>Traffic Detection in Wireshark</strong>
-          <p>Developed a program to encrypt and decrypt messages using AES and RSA encryption
-          algorithms. Implemented key generation, secure key storage, and message exchange protocols to simulate data
-          protection mechanisms. Used Cryptography libraries to handle encryption operations, key pairs, and digital signatures</p>
+        <div class="modal-card">
+          <h1 id="modalTitle">Project Title</h1>
+          <p id="modalDesc">Project description goes here.</p>
+          <div class="modal-buttons">
+            <a id="modalLive" class="button accent" href="#" target="_blank" rel="noopener">View Live</a>
+            <a id="modalGithub" class="button ghost" href="#" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
         </div>
-      </article>
-
-      <article class="card">
-        <a class="media" href="wireshark.html" target="_blank" rel="noopener">
-          <img src="images/wireshark.png" alt="Abstract UI mock" loading="lazy">
-        </a>
-        <div class="caption">
-          <strong>Encryption Tool in Python</strong>
-          <p>Captured and analyzed live network traffic using Wireshark to identify security
-          vulnerabilities such as unencrypted credentials and suspicious IP activity. Detected anomalies including potential malware
-          communications and DNS tunneling patterns. Applied protocol filters and deep packet inspection to investigate traffic
-          behaviour and assess network risk.
-          </p>
-        </div>
-      </article>
-
-      <article class="card">
-        <a class="media" href="imagegen.html" target="_blank" rel="noopener">
-          <img src="images/imagegen.png" alt="3D lines render" loading="lazy">
-        </a>
-        <div class="caption">
-          <strong>AI Art Music Generator In Java</strong>
-          <p>AI Art Music Generator In Java - Designed and implemented a Java application that generates AI-created artwork 
-          based on user-input music preferences. Mapped music genres, sub-genres, and emotional tones to visual elements like
-          colour and style. Integrated algorithms that translate user inputs into aesthetic visual outputs.
-          Encryption Tool in Python - Developed a program to encrypt and decrypt messages using AES
-          </p>
-        </div>
-      </article>
-    </section>
-
-    <section id="contact" class="panel contact">
-      <p>Feel free to contact me at <a href="mailto:justnchxn@gmail.com">justnchxn@gmail.com</a></p>
-      <p>Or connect with me on <a href="https://www.linkedin.com/in/justnchxn" target="_blank" rel="noopener">linkedin.com/in/justnchxn</a></p>
-    </section>
-  </main>
-
-  <!-- Mobile drawer -->
-  <div class="drawer" id="drawer" hidden>
-    <div class="drawer__panel">
-      <button class="iconbtn" id="closeDrawer" aria-label="Close menu">✕</button>
-      <nav class="drawer__nav">
-        <a href="#about">ABOUT</a>
-        <a href="resume.pdf" target="_blank" rel="noopener">RÉSUMÉ</a>
-        <a href="#projects">WORK</a>
-        <a href="#contact">CONTACT</a>
-      </nav>
+      </div>
     </div>
   </div>
 
-  <script>
-    // simple drawer for small screens
-    const btn = document.getElementById('menuBtn');
-    const drawer = document.getElementById('drawer');
-    const closeBtn = document.getElementById('closeDrawer');
+    <script>
+      // ===== Modal logic =====
+      const modal = document.getElementById('projectModal');
+      const closeModal = document.getElementById('closeModal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalDesc = document.getElementById('modalDesc');
+      const modalGithub = document.getElementById('modalGithub');
+      const modalVideo = document.getElementById('modalVideo');
 
-    btn?.addEventListener('click', () => {
-      drawer.hidden = false;
-      btn.setAttribute('aria-expanded', 'true');
-    });
-    closeBtn?.addEventListener('click', () => {
-      drawer.hidden = true;
-      btn.setAttribute('aria-expanded', 'false');
-    });
-    drawer?.addEventListener('click', (e) => {
-      if (e.target === drawer) {
-        drawer.hidden = true;
-        btn.setAttribute('aria-expanded', 'false');
+      function openProject(title, desc, videoSrc, liveLink = '', githubLink = '') {
+        modalTitle.textContent = title;
+        modalDesc.textContent = desc;
+
+        modalVideo.querySelector('source').src = videoSrc;
+        modalVideo.load();
+
+        const liveBtn = document.getElementById("modalLive");
+        const githubBtn = document.getElementById("modalGithub");
+
+        if (liveLink) {
+          liveBtn.href = liveLink;
+          liveBtn.style.display = "inline-flex";
+        } else {
+          liveBtn.style.display = "none";
+        }
+
+        if (githubLink) {
+          githubBtn.href = githubLink;
+          githubBtn.style.display = "inline-flex";
+        } else {
+          githubBtn.style.display = "none";
+        }
+
+        modal.hidden = false;
+        document.body.classList.add('modal-open');
       }
-    });
+
+      function closeProjectModal() {
+        modal.hidden = true;
+        modalVideo.pause();
+        document.body.classList.remove('modal-open'); // ✅ restores scrolling
+      }
+
+      closeModal.addEventListener('click', closeProjectModal);
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeProjectModal();
+        }
+      });
+      document.addEventListener('keydown', (e) => {
+        if (!modal.hidden && e.key === 'Escape') {
+          closeProjectModal();
+        }
+      });
+    </script>
+
+
+  <script>
+    const aboutText = `Hi, I'm Justin Chan. 
+  Born in London, passionate about Computer Science & Tech.
+  Graduated King's College London (2024) — BSc Computer Science.
+  Interests: Gaming, Calisthenics, Football and Stock Trading.`;
+
+    const aboutEl = document.getElementById("aboutText");
+    let i = 0;
+
+    function typeChar() {
+      if (i < aboutText.length) {
+        aboutEl.textContent += aboutText.charAt(i);
+        i++;
+        setTimeout(typeChar, 40); // typing speed per character (ms)
+      } else {
+        // add blinking cursor
+        aboutEl.innerHTML += '<span class="cursor">|</span>';
+      }
+    }
+
+    typeChar();
   </script>
+
 </body>
 </html>
